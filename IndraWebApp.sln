@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "Backend\Backend.csproj", "{BE83F8B4-E041-4480-874D-63E8B25E4DCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteApp", "TesteApp\TesteApp.csproj", "{26F067C6-0232-44C1-892F-6E50CED9B54D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndraWebApp", "IndraWebApp\IndraWebApp.csproj", "{11202E80-7EA4-4C94-96D6-FACB4831A139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE83F8B4-E041-4480-874D-63E8B25E4DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE83F8B4-E041-4480-874D-63E8B25E4DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE83F8B4-E041-4480-874D-63E8B25E4DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE83F8B4-E041-4480-874D-63E8B25E4DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F067C6-0232-44C1-892F-6E50CED9B54D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F067C6-0232-44C1-892F-6E50CED9B54D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F067C6-0232-44C1-892F-6E50CED9B54D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F067C6-0232-44C1-892F-6E50CED9B54D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11202E80-7EA4-4C94-96D6-FACB4831A139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11202E80-7EA4-4C94-96D6-FACB4831A139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11202E80-7EA4-4C94-96D6-FACB4831A139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11202E80-7EA4-4C94-96D6-FACB4831A139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D3ED96D-789D-4DA5-BA78-626834F518B6}
+	EndGlobalSection
+EndGlobal
