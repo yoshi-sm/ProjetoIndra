@@ -12,6 +12,7 @@ namespace Backend
     {   
         public int Id { get; set; }
         public int Quilometragem { get; set; }
+        public int ProximaManutencao { get; set; }
         public int IdManutencao { get; set; }
         public DateTime Data { get; set; }
         public int IdCarro { get; set; }

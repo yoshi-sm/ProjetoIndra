@@ -16,7 +16,8 @@ namespace Backend.Maps
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id).HasColumnName("Id");
-            builder.Property(x => x.Quilometragem).HasColumnName("Quilometragem").HasColumnType("varchar(20)").IsRequired();
+            builder.Property(x => x.Quilometragem).HasColumnName("Quilometragem").IsRequired();
+            builder.Property(x => x.Quilometragem).HasColumnName("ProximaManutencao").IsRequired();
             builder.Property(x => x.IdCarro).HasColumnName("IdCarro").IsRequired();
             builder.Property(x => x.IdManutencao).HasColumnName("IdManutencao").IsRequired();
             builder.Property(x => x.Data).HasColumnName("Data").HasColumnType("date").IsRequired();

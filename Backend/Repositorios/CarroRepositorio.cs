@@ -46,6 +46,41 @@ namespace Backend
             return this.context.Set<Carro>().Find(id);
         }
 
+        public Carro ObterPorPlaca(string placa)
+        {
+            try
+            {
+                var carro = this.context.Set<Carro>().Where(x => x.Placa.Equals(placa));
+                if(carro != null && carro.Any())
+                {
+                    return carro as Carro;
+                }
+                throw new Exception($"Nenhum carro localizado com a placa: {placa}");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Carro ObterPorMarca(string marca)
+        {
+            try
+            {
+                var carro = this.context.Set<Carro>().Where(x => x.Placa.Equals(marca));
+                if (carro != null && carro.Any())
+                {
+                    return carro as Carro;
+                }
+                throw new Exception($"Nenhum carro localizado com a marca: {marca}");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         public List<Carro> ObterTodos()
         {

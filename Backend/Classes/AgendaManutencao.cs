@@ -11,7 +11,6 @@ namespace Backend
     public class AgendaManutencao : IRegistro
     {
         public int Id { get; set; }
-        public int Quilometragem { get; set; }
         public int IdManutencao { get; set; }
         public DateTime Data { get; set; }
         public int IdCarro { get; set; }
