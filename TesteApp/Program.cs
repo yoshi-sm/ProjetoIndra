@@ -17,22 +17,22 @@ namespace TesteApp
             listaManutencao.Add(new Manutencao
             {
                 Nome = "Troca de Oleo",
-                ProximaManutencao = 10
+                ProximaManutencao = 10000
             });
             listaManutencao.Add(new Manutencao
             {
                 Nome = "Troca de Pneu",
-                ProximaManutencao = 40
+                ProximaManutencao = 40000
             });
             listaManutencao.Add(new Manutencao
             {
                 Nome = "Arrefecedor",
-                ProximaManutencao = 20
+                ProximaManutencao = 20000
             });
             listaManutencao.Add(new Manutencao
             {
                 Nome = "Filtro de Ar",
-                ProximaManutencao = 5
+                ProximaManutencao = 5000
             });
             repoManu.AdicionarVarios(listaManutencao);
             #endregion
