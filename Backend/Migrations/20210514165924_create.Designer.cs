@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(FrotaContext))]
-    [Migration("20210512020201_createFrotaDB")]
-    partial class createFrotaDB
+    [Migration("20210514165924_create")]
+    partial class create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,11 +40,6 @@ namespace Backend.Migrations
                     b.Property<int>("IdManutencao")
                         .HasColumnType("int")
                         .HasColumnName("IdManutencao");
-
-                    b.Property<string>("Quilometragem")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)")
-                        .HasColumnName("Quilometragem");
 
                     b.HasKey("Id");
 
@@ -159,9 +154,8 @@ namespace Backend.Migrations
                         .HasColumnType("int")
                         .HasColumnName("IdManutencao");
 
-                    b.Property<string>("Quilometragem")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)")
+                    b.Property<int>("Quilometragem")
+                        .HasColumnType("int")
                         .HasColumnName("Quilometragem");
 
                     b.HasKey("Id");

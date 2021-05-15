@@ -17,12 +17,6 @@ namespace Backend
         }
 
 
-        //public DbSet<Carro> Carros { get; set; }
-        //public DbSet<Marca> Marcas { get; set; }
-        //public DbSet<RegistroManutencao> RegistroManutencoes { get; set; }
-        //public DbSet<AgendaManutencao> AgendaManutencoes { get; set; }
-        //public DbSet<Manutencao> Manutencoes { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder

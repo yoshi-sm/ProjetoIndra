@@ -17,8 +17,7 @@ namespace Backend.Maps
 
             builder.Property(x => x.Id).HasColumnName("Id");
             builder.Property(x => x.Nome).HasColumnName("Nome").HasColumnType("varchar(20)").IsRequired();
-
-
+            //Either change the property CLR type, or ignore the property using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'.'
         }
     }
 }

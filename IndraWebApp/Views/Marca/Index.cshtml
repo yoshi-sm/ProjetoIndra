@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Backend.Marca>
+@{
+}
+
+<h1>Marca</h1>
+
+@Html.ActionLink("Cadastrar", "Create", "Marca", null, new { @class = "btn btn-primary" })
+<br />
+<br />
+<table class="table table-responsive">
+    <tr>
+        <th>Nome</th>
+        <th></th>
+    </tr>
+    @foreach (var marca in Model)
+    {
+        <tr>
+            <td>@marca.Nome</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = marca.Id })
+                @Html.ActionLink("Excluir", "Delete", new { id = marca.Id }, new { onclick = "return confirm('Deseja realmente excluir? " +
+               "Os carros atrelados a esta marca serão excluidos do Banco de Dados');" })
+            </td>
+        </tr>
+    }
+</table>
+

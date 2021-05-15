@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Backend.Manutencao>
+
+<h1>Serviços de Manutencao</h1>
+
+@Html.ActionLink("Cadastrar", "Create", "Manutencao", null, new { @class = "btn btn-primary" })
+<br />
+<br />
+<table class="table table-responsive">
+    <tr>
+        <th>Nome</th>
+        <th>Próxima Manutenção (Km)</th>
+        <th></th>
+    </tr>
+    @foreach (var manutencao in Model)
+    {
+        <tr>
+            <td>@manutencao.Nome</td>
+            <td>@manutencao.ProximaManutencao</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = manutencao.Id })
+                @Html.ActionLink("Excluir", "Delete", new { id = manutencao.Id }, new { onclick = "return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+</table>

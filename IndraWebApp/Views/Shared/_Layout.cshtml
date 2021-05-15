@@ -22,7 +22,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            @Html.ActionLink("Carros", "Index", "Carro", null, new { @class = "nav-link text-dark" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Marcas", "Index", "Marca", null, new { @class = "nav-link text-dark" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Registro de Manutenções", "Index", "Registro", null, new { @class = "nav-link text-dark" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Agenda de Manutenções", "Index", "Agenda", null, new { @class = "nav-link text-dark" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Tipos de Manutenção", "Index", "Manutencao", null, new { @class = "nav-link text-dark" })
                         </li>
                     </ul>
                 </div>

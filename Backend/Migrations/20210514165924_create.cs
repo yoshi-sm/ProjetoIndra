@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Backend.Migrations
 {
-    public partial class createFrotaDB : Migration
+    public partial class create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,7 +64,6 @@ namespace Backend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Quilometragem = table.Column<string>(type: "varchar(20)", nullable: false),
                     IdManutencao = table.Column<int>(type: "int", nullable: false),
                     Data = table.Column<DateTime>(type: "date", nullable: false),
                     IdCarro = table.Column<int>(type: "int", nullable: false)
@@ -92,7 +91,7 @@ namespace Backend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Quilometragem = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Quilometragem = table.Column<int>(type: "int", nullable: false),
                     IdManutencao = table.Column<int>(type: "int", nullable: false),
                     Data = table.Column<DateTime>(type: "date", nullable: false),
                     IdCarro = table.Column<int>(type: "int", nullable: false)

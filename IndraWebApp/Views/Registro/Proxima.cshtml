@@ -1,0 +1,34 @@
+﻿@model Backend.RegistroManutencao
+@{
+    var quilometrage = Model.Quilometragem + Model.Manutencao.ProximaManutencao;
+ }
+<h1>Próxima Manutenção</h1>
+
+<div class="col-md-3">
+    <div class="form-group">
+        @Html.HiddenFor(x => x.Id)
+        @Html.Label("Veículo")
+        @Html.TextBoxFor(x => x.Carro.Nome, new { @class = "form-control", @readonly = true })
+    </div>
+    <div class="form-group">
+        @Html.Label("Cor")
+        @Html.TextBoxFor(x => x.Carro.Cor, new { @class = "form-control", @readonly = true })
+    </div>
+    <div class="form-group">
+        @Html.Label("Placa")
+        @Html.TextBoxFor(x => x.Carro.Placa, new { @class = "form-control", @readonly = true })
+    </div>
+    <div class="form-group">
+        @Html.Label("Tipo de Manutenção")
+        @Html.TextBoxFor(x => x.Manutencao.Nome, new { @class = "form-control", @readonly = true })
+    </div>
+    <div class="form-group">
+        @Html.Label("Quilometragem")
+        @Html.TextBoxFor(x => quilometrage, new { @class = "form-control", @readonly = true })
+    </div>
+
+
+
+    @Html.ActionLink("Voltar", "Index", "Registro", null, new { @class = "btn btn-primary" })
+</div>
+

@@ -1,0 +1,29 @@
+﻿@model Backend.RegistroManutencao
+<h1>Adicionar Registro</h1>
+
+@using (Html.BeginForm("Create", "Registro", FormMethod.Post))
+{
+
+<div class="col-md-3">
+        <div class="form-group">
+            @Html.HiddenFor(x => x.Id)
+            @Html.Label("Placa")
+            @Html.DropDownList("IdCarro", ViewBag.selectCarros, "selecione", new { @class = "form-control", @required = true })
+        </div>
+        <div class="form-group">
+            @Html.Label("Tipo de Manutenção")
+            @Html.DropDownList("IdManutencao", ViewBag.selectManutencoes, "selecione", new { @class = "form-control", @required = true })
+        </div>
+        <div class="form-group">
+            @Html.Label("Quilometragem")
+            @Html.TextBoxFor(x => x.Quilometragem, new { @class = "form-control", @required = true, @type = "number", @min = "0" })
+        </div>
+
+
+
+    <input type="submit" value="Salvar" class="btn btn-primary" />
+    @Html.ActionLink("Voltar", "Index", "Registro", null, new { @class = "btn btn-primary" })
+
+</div>
+
+}

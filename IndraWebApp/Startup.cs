@@ -1,3 +1,5 @@
+using Backend;
+using IndraWebApp.Servicos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +26,13 @@ namespace IndraWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IServico<Carro>, CarroServico>();
+            services.AddScoped<IServico<Marca>, MarcaServico>();
+            services.AddScoped<IServico<Manutencao>, ManutencaoServico>();
+            services.AddScoped<IServico<RegistroManutencao>, RegistroServico>();
+            services.AddScoped<IServico<AgendaManutencao>, AgendaServico>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

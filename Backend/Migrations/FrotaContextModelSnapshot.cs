@@ -39,11 +39,6 @@ namespace Backend.Migrations
                         .HasColumnType("int")
                         .HasColumnName("IdManutencao");
 
-                    b.Property<string>("Quilometragem")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)")
-                        .HasColumnName("Quilometragem");
-
                     b.HasKey("Id");
 
                     b.HasIndex("IdCarro");
@@ -157,9 +152,8 @@ namespace Backend.Migrations
                         .HasColumnType("int")
                         .HasColumnName("IdManutencao");
 
-                    b.Property<string>("Quilometragem")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)")
+                    b.Property<int>("Quilometragem")
+                        .HasColumnType("int")
                         .HasColumnName("Quilometragem");
 
                     b.HasKey("Id");

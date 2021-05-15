@@ -1,0 +1,25 @@
+﻿@model Backend.Manutencao
+
+<h1>Cadastro de Tipos de Manutencao</h1>
+
+@using (Html.BeginForm("Create", "Manutencao", FormMethod.Post))
+{
+
+<div class="col-md-3">
+    <div class="form-group">
+        @Html.HiddenFor(x => x.Id)
+        @Html.Label("Nome")
+        @Html.TextBoxFor(x => x.Nome, new { @class = "form-control", @required = true })
+    </div>
+    <div class="form-group">
+        @Html.Label("Proxima Manutencao (Km)")
+        @Html.TextBoxFor(x => x.ProximaManutencao, new { @class = "form-control", @type = "number", @required = true, @min = "5000" })
+    </div>
+
+
+    <input type="submit" value="Salvar" class="btn btn-primary" />
+    @Html.ActionLink("Voltar", "Index", "Manutencao", null, new { @class = "btn btn-primary" })
+</div>
+
+}
+

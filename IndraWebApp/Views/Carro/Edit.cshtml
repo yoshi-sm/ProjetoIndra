@@ -1,0 +1,40 @@
+﻿@model Backend.Carro
+
+<h1>Editar Carro</h1>
+
+@using (Html.BeginForm("Edit", "Carro", FormMethod.Post))
+{
+
+    <div class="col-md-3">
+        <div class="form-group">
+            @Html.HiddenFor(x => x.Id)
+            @Html.Label("Nome")
+            @Html.TextBoxFor(x => x.Nome, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class="form-group">
+            @Html.Label("Modelo")
+            @Html.TextBoxFor(x => x.Modelo, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class="form-group">
+            @Html.Label("Fabricacao")
+            @Html.TextBoxFor(x => x.Ano, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class="form-group">
+            @Html.Label("Cor")
+            @Html.TextBoxFor(x => x.Cor, new { @class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.Label("Placa")
+            @Html.TextBoxFor(x => x.Placa, new { @class = "form-control", @readonly = true })
+        <div class="form-group">
+            @Html.Label("Marca")
+            @Html.TextBoxFor(x => x.Marca.Nome, new { @class = "form-control", @readonly = true })
+        </div>
+    </div>
+
+
+
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </div>
+
+}
