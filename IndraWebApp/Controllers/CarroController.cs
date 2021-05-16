@@ -44,6 +44,7 @@ namespace IndraWebApp.Controllers
             }
             else
             {
+
                 var carros = this.servico.ListarOrdenado()
                     .Where(x => x.IdMarca.Equals(int.Parse(collection["Marca"])))
                     .ToList();
