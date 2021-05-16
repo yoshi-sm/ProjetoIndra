@@ -38,7 +38,7 @@ namespace IndraWebApp.Controllers
             if (collection.ContainsKey("Placa"))
             {
                 var carros = this.servico.ListarOrdenado()
-                    .Where(x => x.Placa.Equals((string)collection["Placa"]))
+                    .Where(x => x.Placa.ToUpper().Equals(collection["Placa"].ToString().ToUpper()))
                     .ToList();
                 return View("Index", carros);
             }
@@ -86,7 +86,7 @@ namespace IndraWebApp.Controllers
             {
                 var id = collection["Id"];
                 var verificacao = this.servico.ListarOrdenado()
-                    .Where(x => x.Placa.Equals((string)collection["Placa"]))
+                    .Where(x => x.Placa.Equals(collection["Placa"].ToString().ToUpper()))
                     .ToList();
 
                 
@@ -105,7 +105,7 @@ namespace IndraWebApp.Controllers
                         Ano = collection["Ano"],
                         IdMarca = int.Parse(collection["IdMarca"]),
                         Nome = collection["Nome"],
-                        Placa = collection["Placa"]
+                        Placa = collection["Placa"].ToString().ToUpper()
                     };
                     this.servico.Salvar(carro);
                     return RedirectToAction(nameof(Index));

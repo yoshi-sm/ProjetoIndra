@@ -31,7 +31,7 @@
                 @Html.ActionLink("Agendamentos", "Details", "Agenda", new { id = carro.Id })
                 @Html.ActionLink("Editar", "Edit", new { id = carro.Id })
                 @Html.ActionLink("Excluir", "Delete", new { id = carro.Id }, new { onclick = "return confirm('Deseja realmente excluir?');" })
-</tr>
+        </tr>
     }
 
 </table>
@@ -39,15 +39,16 @@
     <tr>
         @using (Html.BeginForm("FilterIndex", "Carro", FormMethod.Post))
         {
-            <td><input type="submit" value="Filtrar por Placa " class="btn btn-primary"  /></td>
-            <td>@Html.TextBox("Placa",null, new { @class = "form-control", @required = true})</td>
+            <td><input type="submit" value="Filtrar por Placa " class="btn btn-primary" /></td>
+            <td>@Html.TextBox("Placa", null, new { @class = "form-control", @required = true })</td>
         }
     </tr>
     <tr>
         @using (Html.BeginForm("FilterIndex", "Carro", FormMethod.Post))
         {
-        <td><input type="submit" value="Filtrar por Marca" class="btn btn-primary" /></td>
-        <td> @Html.DropDownList("Marca", ViewBag.selectMarcas, "selecione", new { @class = "form-control", @required = true })</td>
+            <td><input type="submit" value="Filtrar por Marca" class="btn btn-primary" /></td>
+            <td> @Html.DropDownList("Marca", ViewBag.selectMarcas, "selecione", new { @class = "form-control", @required = true })</td>
         }
     </tr>
 </table>
+@Html.ActionLink("Voltar", "Index", "Home", null, new { @class = "btn btn-primary" })

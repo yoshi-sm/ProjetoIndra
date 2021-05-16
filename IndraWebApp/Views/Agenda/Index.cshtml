@@ -23,13 +23,13 @@
     {
         @if (agenda.Data >= DateTime.Today)
         {
-        <tr>
-            <td>@agenda.Carro.Nome</td>
-            <td>@agenda.Carro.Cor</td>
-            <td>@agenda.Carro.Placa</td>
-            <td>@agenda.Manutencao.Nome</td>
-            <td>@agenda.Data.ToShortDateString()</td>
-        </tr>
+            <tr>
+                <td>@agenda.Carro.Nome</td>
+                <td>@agenda.Carro.Cor</td>
+                <td>@agenda.Carro.Placa</td>
+                <td>@agenda.Manutencao.Nome</td>
+                <td>@agenda.Data.ToShortDateString()</td>
+            </tr>
         }
     }
 
@@ -43,7 +43,8 @@
 
         }
     </tr>
-    <tr>  
+    <tr>
         <td> @Html.ActionLink("Todos Agendamentos Próximos", "FilterIndex", "Agenda", null, new { @class = "btn btn-primary" })</td>
     </tr>
 </table>
+@Html.ActionLink("Voltar", "Index", "Home", null, new { @class = "btn btn-primary" })

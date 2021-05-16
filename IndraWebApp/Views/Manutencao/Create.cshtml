@@ -1,6 +1,6 @@
 ﻿@model Backend.Manutencao
 
-<h1>Cadastro de Tipos de Manutencao</h1>
+<h1>Cadastro de Tipos de Manutenção</h1>
 
 @using (Html.BeginForm("Create", "Manutencao", FormMethod.Post))
 {
@@ -12,7 +12,7 @@
         @Html.TextBoxFor(x => x.Nome, new { @class = "form-control", @required = true })
     </div>
     <div class="form-group">
-        @Html.Label("Proxima Manutencao (Km)")
+        @Html.Label("Próxima Manutenção (Km)")
         @Html.TextBoxFor(x => x.ProximaManutencao, new { @class = "form-control", @type = "number", @required = true, @min = "5000" })
     </div>
 

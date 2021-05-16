@@ -18,10 +18,15 @@
             <td>@marca.Nome</td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id = marca.Id })
-                @Html.ActionLink("Excluir", "Delete", new { id = marca.Id }, new { onclick = "return confirm('Deseja realmente excluir? " +
-               "Os carros atrelados a esta marca serão excluidos do Banco de Dados');" })
+                @Html.ActionLink("Excluir", "Delete", new { id = marca.Id }, new
+                {
+                    onclick = "return confirm('Deseja realmente excluir? " +
+               "Os carros atrelados a esta marca serão excluidos do Banco de Dados');"
+                })
             </td>
         </tr>
     }
 </table>
+@Html.ActionLink("Voltar", "Index", "Home", null, new { @class = "btn btn-primary" })
+
 

@@ -34,14 +34,15 @@
         <th></th>
     </tr>
     @foreach (var registro in Model)
-    { 
-                <tr>
-                    <td>@registro.Manutencao.Nome</td>
-                    <td>@registro.Quilometragem</td>
-                    <td>@registro.Data.ToShortDateString()</td>
-                    <td>
-                        @Html.ActionLink("Próxima Manutenção", "Proxima", "Registro", new { id = registro.Id })
-                </tr>
+    {
+        <tr>
+            <td>@registro.Manutencao.Nome</td>
+            <td>@registro.Quilometragem</td>
+            <td>@registro.Data.ToShortDateString()</td>
+            <td>
+                @Html.ActionLink("Próxima Manutenção", "Proxima", "Registro", new { id = registro.Id })
+        </tr>
     }
 
 </table>
+@Html.ActionLink("Voltar", "Index", "Carro", null, new { @class = "btn btn-primary" })
