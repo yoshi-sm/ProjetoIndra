@@ -58,11 +58,16 @@ namespace IndraWebApp.Controllers
 
         // GET: RegistroController/Details/5
         public ActionResult Details(int id)
-        {
+        {   
+            
             var registros = this.servico.ListarOrdenado()
                 .Where(x => x.Carro.Id.Equals(id));
-
-            return View("Index", registros);
+            if(registros.Count() > 0)
+            {
+                return View("Individual", registros);
+            }
+            return View("ErroRegistro");
+            
         }
 
         public ActionResult Proxima(int id)

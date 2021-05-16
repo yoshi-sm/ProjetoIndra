@@ -1,2 +1,49 @@
-﻿<h1>Agenda de Manutenções</h1>
+﻿@model IEnumerable<Backend.AgendaManutencao>
+
+
+<h1>Agenda de Manutenções</h1>
 @Html.ActionLink("Agendar Manutenção", "Create", "Agenda", null, new { @class = "btn btn-primary" })
+
+
+
+
+<br />
+<br />
+<table class="table table-responsive">
+    <tr>
+        <th>Veículo</th>
+        <th>Cor</th>
+        <th>Placa</th>
+        <th>Tipo de Manutenção</th>
+        <th>Data</th>
+
+        <th></th>
+    </tr>
+    @foreach (var agenda in Model)
+    {
+        @if (agenda.Data >= DateTime.Today)
+        {
+        <tr>
+            <td>@agenda.Carro.Nome</td>
+            <td>@agenda.Carro.Cor</td>
+            <td>@agenda.Carro.Placa</td>
+            <td>@agenda.Manutencao.Nome</td>
+            <td>@agenda.Data.ToShortDateString()</td>
+        </tr>
+        }
+    }
+
+</table>
+<table>
+    <tr>
+        @using (Html.BeginForm("FilterIndex", "Agenda", FormMethod.Post))
+        {
+            <td><input type="submit" value="Filtrar por Placa" class="btn btn-primary" /></td>
+            <td>@Html.DropDownList("IdCarro", ViewBag.selectCarros, "selecione", new { @class = "form-control", @required = true })</td>
+
+        }
+    </tr>
+    <tr>  
+        <td> @Html.ActionLink("Todos Agendamentos Próximos", "FilterIndex", "Agenda", null, new { @class = "btn btn-primary" })</td>
+    </tr>
+</table>

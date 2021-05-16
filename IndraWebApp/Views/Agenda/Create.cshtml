@@ -1,7 +1,11 @@
-﻿@model Backend.RegistroManutencao
+﻿@model Backend.AgendaManutencao
 <h1>Adicionar Registro</h1>
+@{ 
+    string dataHoje = DateTime.Today.ToString("yyyy-MM-dd");
+    string dataLimite = DateTime.Today.AddDays(999).ToString("yyyy-MM-dd");
+}
 
-@using (Html.BeginForm("Create", "Registro", FormMethod.Post))
+@using (Html.BeginForm("Create", "Agenda", FormMethod.Post))
 {
 
 <div class="col-md-3">
@@ -15,8 +19,8 @@
             @Html.DropDownList("IdManutencao", ViewBag.selectManutencoes, "selecione", new { @class = "form-control", @required = true })
         </div>
         <div class="form-group">
-            @Html.Label("Quilometragem")
-            @Html.TextBoxFor(x => x.Quilometragem, new { @class = "form-control", @required = true, @type = "number", @min = "0" })
+            @Html.Label("Data da manutenção")
+            @Html.TextBoxFor(x => x.Data, new { @class = "form-control", @required = true, @type = "date", @min = dataHoje, @max = dataLimite })
         </div>
 
 

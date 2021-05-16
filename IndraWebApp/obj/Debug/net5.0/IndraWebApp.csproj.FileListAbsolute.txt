@@ -802,3 +802,8 @@ E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\R
 E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Registro\Index.cshtml.g.cs
 E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Registro\Create.cshtml.g.cs
 E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Registro\Proxima.cshtml.g.cs
+E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Registro\Individual.cshtml.g.cs
+E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Registro\ErroRegistro.cshtml.g.cs
+E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Agenda\Create.cshtml.g.cs
+E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Agenda\Individual.cshtml.g.cs
+E:\Downloads\Bootcamps\Indra dotnet\Projeto Indra\IndraWebApp\obj\Debug\net5.0\Razor\Views\Agenda\ErroAgenda.cshtml.g.cs

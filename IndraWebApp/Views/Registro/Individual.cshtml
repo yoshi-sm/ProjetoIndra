@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Backend.RegistroManutencao>
+
+@{
+}
+<h1>Registros de Manutenções</h1>
+
+@Html.ActionLink("Registrar Manutenção", "Create", "Registro", null, new { @class = "btn btn-primary" })
+
+<table class="table table-responsive">
+    <tr>
+        <th>Veículo</th>
+        <th>Cor</th>
+        <th>Placa</th>
+
+        <th></th>
+    </tr>
+    <tr>
+        <td>@Model.First().Carro.Nome</td>
+        <td>@Model.First().Carro.Cor</td>
+        <td>@Model.First().Carro.Placa</td>
+    </tr>
+
+</table>
+<br />
+
+
+
+<table class="table table-responsive">
+    <tr>
+        <th>Tipo de Manutenção</th>
+        <th>Quilometragem</th>
+        <th>Data</th>
+
+        <th></th>
+    </tr>
+    @foreach (var registro in Model)
+    { 
+                <tr>
+                    <td>@registro.Manutencao.Nome</td>
+                    <td>@registro.Quilometragem</td>
+                    <td>@registro.Data.ToShortDateString()</td>
+                    <td>
+                        @Html.ActionLink("Próxima Manutenção", "Proxima", "Registro", new { id = registro.Id })
+                </tr>
+    }
+
+</table>

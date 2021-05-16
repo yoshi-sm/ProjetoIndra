@@ -28,25 +28,19 @@
             <td>@carro.Marca.Nome</td>
             <td>
                 @Html.ActionLink("Registro", "Details", "Registro", new { id = carro.Id })
-                @Html.ActionLink("Agendamentos", "Create", "Agenda", new { id = carro.Id })
+                @Html.ActionLink("Agendamentos", "Details", "Agenda", new { id = carro.Id })
                 @Html.ActionLink("Editar", "Edit", new { id = carro.Id })
                 @Html.ActionLink("Excluir", "Delete", new { id = carro.Id }, new { onclick = "return confirm('Deseja realmente excluir?');" })
 </tr>
     }
-
-
-
-
-
 
 </table>
 <table>
     <tr>
         @using (Html.BeginForm("FilterIndex", "Carro", FormMethod.Post))
         {
-                <td><input type="submit" value="Filtrar por Placa" class="btn btn-primary" /></td>
-                <td>@Html.DropDownList("Placa", ViewBag.selectCarros, "selecione", new { @class = "form-control", @required = true })</td>
-
+            <td><input type="submit" value="Filtrar por Placa " class="btn btn-primary"  /></td>
+            <td>@Html.TextBox("Placa",null, new { @class = "form-control", @required = true})</td>
         }
     </tr>
     <tr>

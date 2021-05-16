@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(FrotaContext))]
-    [Migration("20210514165924_create")]
+    [Migration("20210515025319_create")]
     partial class create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

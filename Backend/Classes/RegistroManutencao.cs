@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Backend
 {   
-    public class RegistroManutencao
+    public class RegistroManutencao :IRegistro
     {   
         public int Id { get; set; }
         public int Quilometragem { get; set; }
